@@ -1,0 +1,87 @@
+<div class="col-lg-12" >
+  <div class="col-lg-12" class="header_border">
+  <h1 class="header"><span >Learning</span><span > Board</span></h1>
+  </div>
+    <div class="container">
+      <span><button class="search_btn" (click) = "search()">Search </button></span>
+      <form [formGroup] ="searchForm">
+        <span class="input-group rounded" style="width: 28%;float: right;margin-bottom: 14px">
+            <input type="search" formControlName ="search" style  = "margin-right: 13px; "class="form-control rounded" placeholder="Duration1,Duration2,Technology" aria-label="Search" aria-describedby="search-addon" />
+            <!-- <span class="input-group-text border-0" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span> -->  
+        </span>
+      </form>
+       
+    
+    <div class="grid-container" *ngIf ="!filtercourse" style="margin:2%; height: 700px;">
+        <div *ngFor = " let object of CourseData,index as i">
+          <div class="app_container">
+            <!-- <img src = "assets\elogo.png" height="100" width="160"> -->
+            <!-- <div class="property_text">Course Name:{{object.coursename}}</div> -->
+            <div>
+              <span class="property_text" style="color:#2F4F4F">
+              CourseName:
+              </span>
+              <span style="font-size: 15px;font-style: normal;color: olive;font-weight: 500; ">{{object.coursename}}</span>
+            </div>
+            <div >
+              <span class="property_text" style="color:#2F4F4F">Description:</span>
+              <span style="font-size: 15px;font-style: normal;color: olive;font-weight: 500;">{{object.description}}</span>
+            </div>
+            <div class="property_text" >
+              <span class="property_text" style="color:#2F4F4F">technology:</span>
+              <span style="font-size: 15px;font-style: normal;color: olive;font-weight: 500;">{{object.technology}}</span>
+            </div>
+            <div >
+              <span class="property_text" style="color:#2F4F4F">Duration:</span>
+              <span style="font-size: 15px;font-style: normal;color: olive;font-weight: 500; ">{{object.duration}}</span>
+            </div>
+            <div>
+              <span class="property_text" style="color:#2F4F4F">url:</span>
+              <span style="font-size: 15px;font-style: normal;color: olive;font-weight: 500;">{{object.url}}</span>
+            </div>  
+        </div>
+        </div>
+      </div>
+
+      <div *ngIf ="filtercourse" class="grid-container" style="margin:2%; height: 700px;">
+        <div *ngFor = " let object of searchData,index as i">
+          <div class="app_container">
+            <!-- <img src = "assets\elogo.png" height="100" width="160"> -->
+            <!-- <div class="property_text">Course Name:{{object.coursename}}</div> -->
+            <div>
+              <span class="property_text" style="color:#2F4F4F">
+              CourseName:
+              </span>
+              <span style="font-size: 15px;font-style: normal;color: olive;font-weight: 500; ">{{object.coursename}}</span>
+            </div>
+            <div >
+              <span class="property_text" style="color:#2F4F4F">Description:</span>
+              <span style="font-size: 15px;font-style: normal;font-weight: 500;color: olive;">{{object.description}}</span>
+            </div>
+            <div class="property_text" >
+              <span class="property_text" style="color:#2F4F4F">technology:</span>
+              <span style="font-size: 15px;font-style: normal;color: olive;font-weight: 500;">{{object.technology}}</span>
+            </div>
+            <div >
+              <span class="property_text" style="color:#2F4F4F">Duration:</span>
+              <span style="font-size: 15px;font-style: normal;color: olive;font-weight: 500; ">{{object.duration}}</span>
+            </div>
+            <div>
+              <span class="property_text" style="color:#2F4F4F">url:</span>
+              <span style="font-size: 15px;font-style: normal;color: olive;font-weight: 500;">{{object.url}}</span>
+            </div>  
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+     
+
+      
+      
+   
+
+
+    

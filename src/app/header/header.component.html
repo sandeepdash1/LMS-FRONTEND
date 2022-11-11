@@ -1,0 +1,14 @@
+    <div  class=" col-lg-12 headerbar">
+        <div >
+            <span class="headername" style="cursor: pointer; font-weight: bold;" (click) = "navigatetoHome()" >Learning Management System</span>
+        <!-- <div class="logocontainer"><img class="loginlogo"  src="assets/login.png"></div>  -->
+        <button class="login-btn" *ngIf="!authenticate.isUserLoggedIn()" (click) = "navigatetoLogin()" routerLink = "/login">Login</button>
+        <button class="btn btn-danger login-btn" *ngIf="authenticate.isUserLoggedIn()"  (click) = "navigatetoLogOut()">Logout</button> 
+        </div>  
+    </div>
+<!-- <app-home></app-home> -->
+ 
+
+
+
+

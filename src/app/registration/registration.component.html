@@ -1,0 +1,111 @@
+<!-- <div class="col-lg-12 container">
+<div class="col-sm-4 form_container">
+    <form [formGroup]="registerform">
+        <div class="form-outline" style="margin-bottom: 1%">
+          <input type="email" formControlName="userName" id="form1Example1" class="form-control" [ngClass]="{'error-border':(submitted && registerform.controls.userName.errors?.required )}" />
+          <label class="form-label" for="form1Example1">Email address</label>
+        </div>
+
+        <div class="form-outline" style="margin-bottom: 1%">
+            <input type="number" formControlName="Mobile" id="form1Example2" class="form-control" [ngClass]="{'error-border':(submitted && registerform.controls.Mobile.errors?.required )}" />
+            <label class="form-label" for="form1Example2">Enter Mobile Number</label>
+          </div>
+        <div class="form-outline" style="margin-bottom: 1%">
+          <input type="password" formControlName="password" id="form1Example2" class="form-control" [ngClass]="{'error-border':(submitted && registerform.controls.password.errors?.required )}" />
+          <label class="form-label" for="form1Example2">Password</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" (click)="clickRegister()">Submit</button>
+      </form>
+      </div>
+   </div>    -->
+
+   <!-- <div class="col-lg-12 login_page">
+    <div class="col-sm-4 form_container">
+    <form [formGroup]="registerform">
+        <div class="form-outline" style="margin-bottom: 1%">
+          <input type="email" formControlName="userName" id="form1Example1" class="form-control" [ngClass]="{'error-border':(submitted && registerform.controls.userName.errors?.required )}" />
+          <label class="form-label" for="form1Example1">User Name</label>
+        </div>
+      
+        <div class="form-outline" style="margin-bottom: 1%">
+            <input type="text" formControlName="Mobile" id="form1Example2" class="form-control" [ngClass]="{'error-border':(submitted && registerform.controls.Mobile.errors?.required )}" />
+            <label class="form-label" for="form1Example2">Enter Email</label>
+          </div>
+
+          <div class="form-outline" style="margin-bottom: 1%">
+          
+            <select formControlName="selectRole" class="form-select" [ngClass]="{'error-border':(submitted && registerform.controls.selectRole.errors?.required )}" aria-label="Default select example">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+              </select>
+              <label class="form-label" for="form1Example2">Enter Role</label>
+          </div>
+
+          <div class="form-outline" style="margin-bottom: 1%">
+            <input type="password" formControlName="password" id="form1Example2" class="form-control" [ngClass]="{'error-border':(submitted && registerform.controls.password.errors?.required )}" />
+            <label class="form-label" for="form1Example2">Password</label>
+          </div>
+        <div class="row mb-4">
+          <div class="col d-flex justify-content-center">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" (click)="clickRegister()">Submit</button>
+      </form>
+    </div>
+    </div> -->
+
+
+  
+      <div class="col-lg-12 login_page">
+          <div class="row">
+            <!-- <h2 style="text-align: left;color:#06f7ff;" >USER REGISTRATION</h2> -->
+            <div class="col-sm-4 form_container">
+                  <form [formGroup]="registerForm" >
+                      <div class="form-group"  style="margin-top: -2%">
+                          <label  style="text-align: center;">Username</label>
+                          <input type="text" style="width: 73%;margin: 0 auto;" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                          <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                              <div  style="text-align: center;" *ngIf="f.username.errors.required">Username is required</div>
+                          </div>
+                      </div>
+                      <!-- <div class="form-group">
+                          <label>Last Name</label>
+                          <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                          <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                              <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                          </div>
+                      </div> -->
+                      <div class="form-group"  style="margin-top: -2%">
+                          <label  style="text-align: center;">Email</label>
+                          <input type="text" style="width: 73%;margin: 0 auto;" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                              <div  style="text-align: center;" *ngIf="f.email.errors.required">Email is required</div>
+                              <div  style="text-align: center;" *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                          </div>
+                      </div>
+                       <div class="form-group" style="margin-top: -2%">
+                          <label style="text-align: center;">User Role</label>  
+                          <select style="width: 73%;margin: 0 auto;" formControlName="selectRole" class="form-select"  aria-label="Default select example" [ngClass]="{ 'is-invalid': submitted && f.selectRole.errors }">
+                          <option value="user">User</option>
+                          <option value="admin">Admin</option>
+                        </select>
+                          <div *ngIf="submitted && f.selectRole.errors" class="invalid-feedback">
+                              <div *ngIf="f.selectRole.errors.required"  style="text-align: center;"> Role required</div>
+                          </div>
+                      </div>
+                      <div class="form-group"  style="margin-top: -2%">
+                          <label>Password</label>
+                          <input style="width: 73%;margin: 0 auto;" type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                              <div  style="text-align: center;" *ngIf="f.password.errors.required">Password is required</div>
+                              <div  style="text-align: center;" *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                          </div>
+                      </div>
+                      <div class="form-group"  style="margin-top: -2%;margin-left: 39%;">
+                          <button style="margin: 0 auto;" class="btn btn-primary" (click) = "clickRegister()">Register</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  

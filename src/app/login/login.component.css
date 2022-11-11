@@ -1,0 +1,87 @@
+.form_container{
+    border: 0px solid;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 4%;
+    padding: 5%;
+    background: rgba(247, 238, 227, 0.432);
+    border-radius: 5%;
+    margin-bottom: 5%;
+}
+.login-btn{
+    margin: 10px;
+    margin-top: 5%;
+}
+.container{
+    margin: 0 94px;
+}
+.login{
+    margin-left:44px;
+    width:45%; 
+    padding: 5px; 
+    background-color: #3CB371;
+    border: none;
+    border-radius: 5px;
+}
+.has-error{
+    color: red;
+    /* background-color: red; */
+}
+.error-border{
+    /* background-color: red; */
+    border: 1.5px solid red;
+}
+.login_page{
+    background-image: url(/assets/lms_login.jpg);
+    background-size: 100% ;  
+    background-size: cover;
+    padding: 4%;
+    height: 550px;
+    
+}
+.btn-block{
+    position: relative;
+    left: 81px;
+    width: 40%;
+}
+.modal.show{
+    display: block;
+  }
+  .addPopup-btn {
+    float: right;
+    padding: 3px;
+    width: 7%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 0px solid;
+    border-radius: 5px;
+    background-color: MediumBlue;
+    color: white;
+    margin-right: 1%;
+    padding: 5px;
+}
+.closePopup-btn{
+    padding: 3px;
+    width: 7%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 0px solid;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    margin-right: 1%;
+    padding: 5px;
+}
+.otpmsg{
+    font-size: 8px;
+    color: #ccc;
+}
+.snackbarerror {
+    max-width: 100% !important;
+    margin-left: auto !important; 
+    margin-right: auto !important; 
+    margin-bottom: 1rem !important; 
+    padding: 6px !important; 
+    background-color: rgb(248, 48, 48);
+    color: rgb(53, 51, 51),
+  }

@@ -1,0 +1,28 @@
+.headerbar{
+    border: 1px solid rgb(162, 182, 202)	;
+    background-color: rgb(162, 182, 202)	;
+    padding: 8px;
+    padding-left: 24px;
+    padding-bottom: 10px;}
+    /* position:;
+} */
+.headername{
+    font-size: 22px;
+}
+.login-btn ,.register-btn{
+    float: right;
+    padding: 3px;
+    width: 7%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 0px solid;
+    border-radius: 5px;
+    background-color: MediumBlue;
+    color: white;
+    margin-right: 1%;
+    padding: 5px;
+}
+.register-btn{
+margin-right: 10px;
+}
+

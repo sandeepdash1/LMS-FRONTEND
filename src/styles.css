@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css);
+@import '~bootstrap/dist/css/bootstrap.min.css';
+#mymodal{
+    z-index: 999999;
+}
+.snackbar {
+    max-width: 20% !important;
+    margin-left: auto !important; 
+    margin-right: auto !important; 
+    margin-bottom: 1rem !important; 
+    padding: 10px !important; 
+    background-color: green;
+    color: white;
+    position: absolute;
+    right: 37%;
+    top: 80%;
+  }
+  .mat-button-wrapper {
+    color: black !important; 
+  }
+  .snackbarerror{
+    max-width: 20% !important;
+    margin-left: auto !important; 
+    margin-right: auto !important; 
+    margin-bottom: 1rem !important; 
+    padding: 10px !important; 
+    background-color: red;
+    color: white;
+    position: absolute;
+    right: 37%;
+    top: 80%;
+  }
